@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="607.0" style="-fx-background-color: #610B21;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Client.Waiting.view.WaitingFXMLController">
+   <center>
+      <StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="201.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#f7819f" strokeType="OUTSIDE" strokeWidth="0.0" text="Waiting" wrappingWidth="178.13671875">
+               <font>
+                  <Font name="Bauhaus 93" size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

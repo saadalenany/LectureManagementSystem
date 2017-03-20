@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="663.0" style="-fx-background-color: #610B21;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Client.Quiz.view.QuizFXMLController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="663.0" style="-fx-background-color: #610B21;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="59.0" text="Time :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="timeTxt" alignment="CENTER" prefHeight="27.0" prefWidth="60.0" text="0:0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="663.0" spacing="10.0" style="-fx-background-color: #610B21;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#submitButtonAction" prefHeight="47.0" prefWidth="101.0" style="-fx-background-color: #F7819F;" text="Submit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ReturnButton" onAction="#ReturnButtonAction" prefHeight="48.0" prefWidth="152.0" style="-fx-background-color: #F7819F;" text="Return to lecture">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane fx:id="MainCenterPane" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #610B21;" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #610B21; -fx-padding: 0;" stylesheets="@../../../../resource/styleSheet.css">
+               <content>
+                  <VBox fx:id="QuizBox" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #610B21;" />
+               </content>
+            </ScrollPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

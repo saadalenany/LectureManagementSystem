@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="AnchorPane" prefHeight="623.0" prefWidth="814.0" style="-fx-background-color: #FFF; -fx-border-color: #2ecc71; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.login_signUp.view.SignUpController">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="400.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="txtUser" alignment="CENTER" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="168.0" prefHeight="45.0" prefWidth="400.0" promptText="user name" unFocusColor="#2ecc71">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmail" alignment="CENTER" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="168.0" prefHeight="45.0" prefWidth="400.0" promptText="E - Mail" unFocusColor="#2ecc71">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPhone" alignment="CENTER" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="125.0" prefHeight="42.0" prefWidth="400.0" promptText="Phone" unFocusColor="#2ecc71">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="400.0" prefHeight="45.0" prefWidth="400.0" promptText="Password" unFocusColor="#2ecc71">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="reTxtPassword" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="400.0" prefHeight="45.0" prefWidth="400.0" promptText="repeat password" unFocusColor="#2ecc71">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXTextField fx:id="txt_id" alignment="CENTER" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="400.0" prefHeight="45.0" prefWidth="400.0" promptText="Academic ID" unFocusColor="#2ecc71">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </JFXTextField>
+            <HBox maxWidth="-Infinity" prefHeight="30.0" prefWidth="267.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="69.0" text="Gender" textFill="#2ecc71">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="maleRadio" prefHeight="24.0" prefWidth="85.0" selected="true" text="Male" textFill="#2ecc71">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="femaleradio" text="Female" textFill="#2ecc71" toggleGroup="$gender">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <JFXComboBox fx:id="comboDepartemet" prefHeight="36.0" prefWidth="121.0" promptText="Department" style="-fx-border-radius: 10;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="6.0" />
+                     </padding></JFXComboBox>
+                  <JFXTextField fx:id="txtcourse" alignment="CENTER" focusColor="#2ecc71" maxHeight="-Infinity" maxWidth="178.0" minHeight="-Infinity" minWidth="178.0" prefHeight="40.0" prefWidth="178.0" promptText="Course" unFocusColor="#2ecc71">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" right="30.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="50.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <ImageView fitHeight="152.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../resource/educational_people_logo.png" />
+         </image>
+      </ImageView>
+   </top>
+   <bottom>
+      <JFXButton fx:id="signUp" onAction="#SignUpAction" prefHeight="37.0" prefWidth="151.0" style="-fx-background-color: #2ecc71;" text="Sign Up Now" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+</BorderPane>

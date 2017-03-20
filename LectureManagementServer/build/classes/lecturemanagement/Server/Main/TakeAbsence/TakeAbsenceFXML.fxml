@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="153.0" prefWidth="517.0" style="-fx-background-color: #3a8abf;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.Main.TakeAbsence.TakeAbsenceFXMLController">
+   <children>
+      <JFXButton onAction="#takeAbsence" prefHeight="153.0" prefWidth="518.0" text="Take Absence" textFill="#392fc9">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

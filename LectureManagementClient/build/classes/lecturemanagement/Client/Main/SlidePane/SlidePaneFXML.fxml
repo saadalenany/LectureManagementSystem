@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="357.0" prefWidth="593.0" style="-fx-background-color: #610B21;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Client.Main.SlidePane.SlidePaneFXMLController">
+   <bottom>
+      <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="632.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#fullScreenButtonAction" style="-fx-background-color: #F7819F;" text="full screen" />
+            <JFXButton fx:id="prevButton" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#previousButtonAction" prefHeight="17.0" prefWidth="50.0" style="-fx-background-color: #F7819F;" text="prev">
+           </JFXButton>
+            <JFXButton fx:id="nextButton" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#nextButtonAction" prefHeight="22.0" prefWidth="50.0" style="-fx-background-color: #F7819F;" text="next">          
+         </JFXButton>
+         </children>
+         <padding>
+            <Insets right="2.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="LectureView" fitHeight="308.0" fitWidth="472.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

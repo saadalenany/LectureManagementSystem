@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="RootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="735.0" style="-fx-background-color: #610B21;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Client.Main.view.MainFXMLController">
+   <bottom>
+      <StackPane prefHeight="41.0" prefWidth="735.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton prefHeight="45.0" prefWidth="167.0" style="-fx-background-color: #F7819F;" text="Add Note">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <StackPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </StackPane.margin>
+            </HBox>
+         </children>
+      </StackPane>
+   </bottom>
+   <right>
+      <ScrollPane prefHeight="412.0" prefWidth="169.0" stylesheets="@../../../../../../LectureManagementServer/src/resource/styleSheet.css" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="800.0" prefWidth="167.0">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="570.0" prefWidth="167.0" style="-fx-background-color: #610B21;">
+                     <children>
+                        <StackPane prefHeight="36.0" prefWidth="166.0">
+                           <children>
+                              <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Note" wrappingWidth="44.13671875">
+                                 <font>
+                                    <Font name="Arial Bold" size="17.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </VBox>
+         </content>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </ScrollPane>
+   </right>
+   <top>
+      <HBox prefHeight="28.0" prefWidth="735.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar style="-fx-background-color: #F7819F;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <StackPane fx:id="lecturePane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

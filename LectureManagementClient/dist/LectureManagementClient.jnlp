@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LectureManagementClient.jnlp">
+  <information>
+    <title>LectureManagementClient</title>
+    <vendor>Amr</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="LectureManagementClient.jar" size="579844" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\curvesapi-1.04.jar" size="98365" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2183063" download="eager" />
+    <jar href="lib\poi-3.16-beta1.jar" size="2603977" download="eager" />
+    <jar href="lib\poi-examples-3.16-beta1.jar" size="369449" download="eager" />
+    <jar href="lib\poi-excelant-3.16-beta1.jar" size="30957" download="eager" />
+    <jar href="lib\poi-ooxml-3.16-beta1.jar" size="1362767" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.16-beta1.jar" size="5863326" download="eager" />
+    <jar href="lib\poi-scratchpad-3.16-beta1.jar" size="1332736" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="LectureManagementClient" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="lecturemanagement.Client.Login.view.LectureManagement"  name="LectureManagementClient" />
+  <update check="always"/>
+</jnlp>

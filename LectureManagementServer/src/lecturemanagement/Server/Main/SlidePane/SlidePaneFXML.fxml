@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="339.0" prefWidth="573.0" style="-fx-border-color: #000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.Main.SlidePane.SlidePaneFXMLController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="571.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="locationTxt" fill="#214f83" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="FastInputTxt" onKeyPressed="#fastLocAction" prefHeight="25.0" prefWidth="42.0" style="-fx-background-color: fff; -fx-border-color: #80B2D1; -fx-border-radius: 5;">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" color="#c9c7c7" height="12.11" radius="5.5525" width="12.1" />
+               </effect>
+            </TextField>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#fullScreenButtonAction" text="full screen">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0">
+                     <image>
+                        <Image url="@../../../../resource/fullscreen.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="0.0" radius="0.0" width="0.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <Shadow color="#498fbb" height="1.0" radius="0.0" width="0.0" />
+               </effect>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <right>
+      <JFXButton fx:id="nextButton" contentDisplay="GRAPHIC_ONLY" onAction="#nextButtonAction" style="-fx-background-color: ;" text="prev" BorderPane.alignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="52.0" opacity="0.2">
+               <image>
+                  <Image url="@../../../../resource/right.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#8c1d1d" />
+               </effect>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow color="#498fbb" height="1.0" radius="0.0" width="0.0" />
+         </effect>
+      </JFXButton>
+   </right>
+   <left>
+      <JFXButton fx:id="prevButton" contentDisplay="GRAPHIC_ONLY" onAction="#previousButtonAction" style="-fx-background-color: ;" text="prev" BorderPane.alignment="CENTER">
+         <effect>
+            <Shadow color="#498fbb" height="1.0" radius="0.0" width="0.0" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="52.0" opacity="0.2" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@../../../../resource/left.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </left>
+   <top>
+      <HBox fx:id="BorderBox" alignment="TOP_RIGHT" prefHeight="35.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#CloseAction">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0">
+                     <image>
+                        <Image url="@../../../../resource/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="-5.0" top="-2.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </top>
+</BorderPane>

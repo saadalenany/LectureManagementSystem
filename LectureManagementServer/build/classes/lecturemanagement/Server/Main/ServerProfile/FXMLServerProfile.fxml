@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="528.0" prefWidth="406.0" style="-fx-background-color: #3a8abf;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.Main.ServerProfile.FXMLServerProfileController">
+    <stylesheets>
+        <URL value="@fxmlserverprofile.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="TOP_RIGHT" layoutY="-2.0" prefHeight="33.0" prefWidth="408.0">
+         <children>
+            <JFXButton fx:id="close" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@../../../../resource/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <ImageView fitHeight="156.0" fitWidth="184.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@profile-picture.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="username" alignment="CENTER" layoutX="203.0" layoutY="25.0" mouseTransparent="true" prefHeight="33.0" prefWidth="175.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="academic_id" alignment="CENTER" layoutX="203.0" layoutY="64.0" mouseTransparent="true" prefHeight="24.0" prefWidth="175.0" text="Academic_ID" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="email" alignment="CENTER" layoutX="203.0" layoutY="97.0" mouseTransparent="true" prefHeight="24.0" prefWidth="175.0" text="E-mail" textFill="WHITE">
+         <font>
+            <Font name="Monotype Corsiva" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="phone" alignment="CENTER" layoutX="223.0" layoutY="130.0" mouseTransparent="true" prefHeight="23.0" prefWidth="136.0" text="phone" textFill="WHITE">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dep" alignment="CENTER" layoutX="261.0" layoutY="159.0" mouseTransparent="true" prefHeight="33.0" prefWidth="59.0" text="Dep" textFill="WHITE">
+         <font>
+            <Font name="Miriam" size="21.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutY="196.0" prefHeight="292.0" prefWidth="408.0" style="-fx-background-color: #3a8abf;">
+         <content>
+            <StackPane prefHeight="289.0" prefWidth="406.0" style="-fx-background-color: #3a8abf; -fx-alignment: center;">
+               <children>
+                  <Accordion style="-fx-background-color: #3a8abf;">
+                    <panes>
+                      <TitledPane style="-fx-background-color: #3a8abf;" text="Update Personal Data">
+                           <content>
+                              <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3a8abf;">
+                                 <content>
+                                    <VBox prefHeight="264.0" prefWidth="404.0" spacing="20.0" style="-fx-background-color: #3a8abf;">
+                                       <children>
+                                          <JFXTextField fx:id="newusername" labelFloat="true" promptText="New Username" unFocusColor="#6fa3eb" />
+                                          <JFXTextField fx:id="newacademic_id" labelFloat="true" layoutX="15.0" layoutY="30.0" promptText="New Academic ID" unFocusColor="#6fa3eb" />
+                                          <JFXTextField fx:id="newemail" labelFloat="true" layoutX="10.0" layoutY="41.0" promptText="New E-Mail" unFocusColor="#6fa3eb" />
+                                          <JFXTextField fx:id="newphone" labelFloat="true" layoutX="10.0" layoutY="72.0" promptText="New Phone Number" unFocusColor="#6fa3eb" />
+                                          <JFXComboBox fx:id="newdep" editable="true" prefHeight="25.0" prefWidth="384.0" promptText="Department" />
+                                          <JFXPasswordField fx:id="currentpassword" labelFloat="true" promptText="Current Password" unFocusColor="#6fa3eb" />
+                                          <JFXPasswordField fx:id="newpassword" labelFloat="true" layoutX="15.0" layoutY="286.0" promptText="New Password" unFocusColor="#6fa3eb" />
+                                          <JFXPasswordField fx:id="repeatpassword" labelFloat="true" layoutX="15.0" layoutY="337.0" promptText="Repeat New Password" unFocusColor="#6fa3eb" />
+                                          <JFXButton fx:id="update" alignment="CENTER" onAction="#onUpdateData" prefHeight="25.0" prefWidth="399.0" text="UPDATE DATA" textFill="#2413e1" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="logout" layoutX="-1.0" layoutY="488.0" onAction="#onLogOut" prefHeight="39.0" prefWidth="408.0" text="LOG OUT" textFill="#1600a7">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

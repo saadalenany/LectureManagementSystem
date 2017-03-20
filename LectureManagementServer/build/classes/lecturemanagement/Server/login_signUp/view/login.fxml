@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFF; -fx-border-color: #3498db; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.login_signUp.view.LoginController">
+   <top>
+      <ImageView fitHeight="165.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../../resource/educational_people_logo.png" />
+         </image>
+      </ImageView>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="105.0" prefWidth="760.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resource/1481682134_icons_user.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="txtusername" maxWidth="251.0" minWidth="208.0" prefHeight="45.0" prefWidth="251.0" promptText="User name" unFocusColor="#8cb5ff">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resource/1481682195_icons_password.png" />
+                     </image>
+                  </ImageView>
+                  <JFXPasswordField fx:id="txtpassword" maxWidth="251.0" minWidth="167.0" prefHeight="45.0" prefWidth="251.0" promptText="password" unFocusColor="#6692e4">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                  </JFXPasswordField>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </HBox>
+            <JFXButton fx:id="btnLogin" onAction="#LoginButtonAction" prefHeight="43.0" prefWidth="139.0" style="-fx-background-color: #3498db;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

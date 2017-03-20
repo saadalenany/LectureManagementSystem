@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.Signup.SignUpFXMLController">
+   <center>
+      <StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="391.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="47.0" prefWidth="418.0">
+                     <children>
+                        <JFXTextField fx:id="username" alignment="CENTER" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="Username" style="-fx-text-fill: #ffffff;" unFocusColor="#134c6f" HBox.hgrow="ALWAYS">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="41.0" prefWidth="560.0" spacing="10.0">
+                     <children>
+                        <JFXPasswordField fx:id="password" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="Password" unFocusColor="#134c6f">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                        </JFXPasswordField>
+                        <JFXPasswordField fx:id="rePassword" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="Re-Password" unFocusColor="#134c6f">
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="560.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="email" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="E-Mail" style="-fx-text-fill: #ffffff;" unFocusColor="#134c6f">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                        </JFXTextField>
+                        <JFXTextField fx:id="academic_id" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="Academic ID" style="-fx-text-fill: #ffffff;" unFocusColor="#134c6f">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="560.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="course" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="Course" style="-fx-text-fill: #ffffff;" unFocusColor="#134c6f">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                        </JFXTextField>
+                        <JFXTextField fx:id="phone" focusColor="WHITE" labelFloat="true" maxWidth="-Infinity" promptText="Phone Number" style="-fx-text-fill: #ffffff;" unFocusColor="#134c6f">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                              </Lighting>
+                           </effect>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="43.0" prefWidth="259.0" spacing="30.0">
+                     <children>
+                        <JFXComboBox fx:id="gender" promptText="Gender">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="department" promptText="Department">
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </JFXComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="90.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="259.0" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="signup" onAction="#handleSignUpAction" prefHeight="29.0" prefWidth="127.0" ripplerFill="WHITE" style="-fx-background-color: #13679F;" text="SignUp" textAlignment="CENTER" textFill="WHITE">
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

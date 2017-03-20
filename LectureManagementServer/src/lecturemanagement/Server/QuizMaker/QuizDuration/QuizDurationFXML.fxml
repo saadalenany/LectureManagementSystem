@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="RootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="108.0" style="-fx-border-color: #0095FF; -fx-background-color: #E6E6E6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.QuizMaker.QuizDuration.QuizDurationFXMLController">
+   <top>
+      <Text fx:id="TimeTxt" fill="#404040" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </Text>
+   </top>
+   <center>
+      <Text fx:id="StudentCounterTxt" fill="#097c78" strokeType="OUTSIDE" strokeWidth="0.0" text="100/100" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="2.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+   </center>
+   <bottom>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#StopQuizAction" prefHeight="29.0" prefWidth="0.0" text="StopQuiz" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="2.0" />
+         </BorderPane.margin>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0">
+               <image>
+                  <Image url="@../../../../resource/stop_Q.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </bottom>
+</BorderPane>

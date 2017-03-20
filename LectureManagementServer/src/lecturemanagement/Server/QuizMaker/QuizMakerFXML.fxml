@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="RootBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#ClickPaneAction" prefHeight="751.0" prefWidth="769.0" style="-fx-background-color: #2A80B9; -fx-border-color: #000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.QuizMaker.QuizMakerController">
+    <bottom>
+        <HBox fx:id="BottomHbox" alignment="CENTER" prefHeight="82.0" prefWidth="640.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <JFXCheckBox fx:id="resultPreview" checkedColor="#272eb2" text="Allow preview Marks" textFill="WHITE" unCheckedColor="BLACK" />
+                <JFXButton fx:id="sendBtn" onAction="#onSending" prefHeight="36.0" prefWidth="138.0" style="-fx-background-color: #1DE4D4;" text="Send">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXTextField fx:id="timestop" focusColor="#f8f8f8" labelFloat="true" maxWidth="148.0" minWidth="148.0" prefHeight="36.0" prefWidth="148.0" promptText="time per minute" style="-fx-text-fill: #fff;" unFocusColor="#89f4eb">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </JFXTextField>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </HBox>
+        
+    </bottom>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <center>
+                <ScrollPane fx:id="scroller" prefHeight="255.0" prefWidth="640.0" style="-fx-padding: 0; -fx-background-color: #3a8abf;" stylesheets="@../../../resource/styleSheet.css" BorderPane.alignment="CENTER">
+                    <content>
+                        <StackPane fx:id="stackp" prefHeight="521.0" prefWidth="767.0" style="-fx-background-color: #610B21;">
+                            <children>
+                                <VBox fx:id="content" prefHeight="451.0" prefWidth="767.0" spacing="5.0" style="-fx-background-color: #2A80B9;">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </StackPane>
+                    </content>
+                </ScrollPane>
+            </center>
+            <top>
+                <VBox alignment="TOP_CENTER" prefHeight="108.0" prefWidth="515.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <StackPane prefHeight="38.0" prefWidth="515.0">
+                            <children>
+                        <HBox alignment="CENTER" onMouseClicked="#ClickPaneAction" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                                      <Text fx:id="QuizIDTxt" fill="#1de4d4" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                          <font>
+                                              <Font name="System Bold" size="18.0" />
+                                          </font>
+                                      </Text>
+                              <JFXTextField fx:id="QuizName" focusColor="WHITE" promptText="QuizName" style="-fx-text-fill: #fff;" unFocusColor="#a1f0fc">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                            </children>
+                        </StackPane>
+                        <HBox fx:id="HBoxInfo" alignment="BOTTOM_LEFT" prefHeight="23.0" prefWidth="584.0" spacing="10.0">
+                            <children>
+                                <JFXTextField fx:id="numberofchoices" focusColor="WHITE" labelFloat="true" promptText="number of choices" style="-fx-text-fill: #fff;" unFocusColor="#89f4eb">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </JFXTextField>
+                                <JFXButton fx:id="add" contentDisplay="GRAPHIC_ONLY" onAction="#onAdding" onDragEntered="#MouseEnteredBtnAction" onDragExited="#MouseExitBtnAction" prefHeight="37.0" prefWidth="40.0" text="+">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                           <graphic>
+                                        <ImageView onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+                                            <image>
+                                                <Image url="@../../../resource/add_Q.png" />
+                                            </image>
+                                 <effect>
+                                    <Shadow color="#1de4d4" height="0.0" radius="0.0" width="0.0" />
+                                 </effect>
+                                        </ImageView>
+                           </graphic>
+                                </JFXButton>
+                                <JFXButton fx:id="remove" contentDisplay="GRAPHIC_ONLY" onAction="#onRemoving" onDragEntered="#MouseEnteredBtnAction" onDragExited="#MouseExitBtnAction" prefHeight="21.0" prefWidth="34.0" text="-">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                           <graphic>
+                                        <ImageView onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+                                            <image>
+                                                <Image url="@../../../resource/remove_Q.png" />
+                                            </image>
+                                 <effect>
+                                    <Shadow color="#1de4d4" height="0.0" radius="0.0" width="0.0" />
+                                 </effect>
+                                        </ImageView>
+                           </graphic>
+                                </JFXButton>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <bottom>
+
+                <Line endX="760.0" stroke="#73c0ff" strokeWidth="2.0" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+    </center>
+    <top>
+        <HBox fx:id="BorderBox" prefHeight="36.0" prefWidth="769.0" BorderPane.alignment="CENTER">
+          
+            <children>
+                <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #1DE4D4;">
+                    <menus>
+                        <Menu fx:id="file" mnemonicParsing="false" text="   File   ">
+                            <items>
+                                <MenuItem fx:id="newone" mnemonicParsing="false" onAction="#onNew" text="New       " />
+                                <MenuItem fx:id="save" mnemonicParsing="false" onAction="#onSaving" text="Save      " />
+                                <MenuItem fx:id="open" mnemonicParsing="false" onAction="#onOpening" text="Open      " />
+                                <MenuItem fx:id="close" mnemonicParsing="false" text="Close      " />
+                            </items>
+                        </Menu>
+                    </menus>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+                </MenuBar>
+                <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="476.0" layoutY="36.0" onMouseClicked="#ClosePaneAction" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0">
+                            <image>
+                                <Image url="@../../../resource/close.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+               <HBox.margin>
+                  <Insets left="660.0" />
+               </HBox.margin>
+                </JFXButton>
+            </children>
+        </HBox>
+    </top>
+</BorderPane>

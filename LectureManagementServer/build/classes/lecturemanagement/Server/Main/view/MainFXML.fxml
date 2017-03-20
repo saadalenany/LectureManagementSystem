@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="500.0" style="-fx-background-color: #610B21;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.Main.view.MainFXMLController">
+   <bottom>
+      <ToolBar opacity="0.89" prefHeight="0.0" prefWidth="623.0" style="-fx-background-color: #610B21;" BorderPane.alignment="CENTER">
+        <items>
+            <JFXButton onAction="#uploadLectureAction" style="-fx-background-color: #F7819F;" text="Upload lecture" />
+            <JFXButton onAction="#handleQuizAction" style="-fx-background-color: #F7819F;" text="MakeQuiz" />
+            <JFXButton onAction="#TakeAbsanceButtonAction" prefHeight="9.0" prefWidth="114.0" style="-fx-background-color: #F7819F;" text="Take Absance" />
+            <JFXButton fx:id="openSlideBtn" onAction="#OpenSlideAction" style="-fx-background-color: #F7819F;" text="Open Slide" />
+            <JFXButton fx:id="StartOnlineButton" onAction="#StartOnlineButtonAction" prefHeight="45.0" prefWidth="47.0" style="-fx-background-color: #F7819F; -fx-background-radius: 50;" text="Start">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+        </items>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </ToolBar>
+   </bottom>
+   <top>
+      <VBox prefHeight="42.0" prefWidth="613.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="33.0" prefWidth="613.0" spacing="20.0">
+               <children>
+                  <Text fill="#fff3f3" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture ID :" wrappingWidth="96.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lecID" fill="#fff3f3" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture ID" wrappingWidth="216.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-20.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="613.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="37.0" style="-fx-border-color: rgb(211,211,211);">
+                     <children>
+                        <MenuBar prefHeight="35.0" prefWidth="46.0" stylesheets="@../../../../resource/styleSheet.css">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="    ">
+                                 <items>
+                                    <CustomMenuItem hideOnClick="false" mnemonicParsing="false" text="Unspecified Action">
+                                       <content>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(211,211,211);" stylesheets="@../../../../resource/styleSheet.css">
+                                             <content>
+                                                <VBox fx:id="requestBox" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgb(211,211,211);" />
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </CustomMenuItem>
+                                 </items>
+                              </Menu>
+                          </menus>
+                           <effect>
+                              <ImageInput>
+                                 <source>
+                                    <Image url="file:/D:/Java/LecureManagement/LectureManagementServer/src/resource/user-add.png" />
+                                 </source>
+                              </ImageInput>
+                           </effect>
+                        </MenuBar>
+                        <StackPane fx:id="numOfRequestPane" layoutX="57.0" layoutY="-13.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-8.0">
+                           <children>
+                              <Rectangle fx:id="SignUpCounterRect" arcHeight="5.0" arcWidth="5.0" fill="#f82f2f" height="17.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="INSIDE" width="18.0" />
+                              <Text fx:id="SignUpCounterText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" StackPane.alignment="TOP_CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <Bloom threshold="0.34" />
+                                 </effect>
+                              </Text>
+                           </children>
+                        </StackPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <HBox fx:id="MainHBox" alignment="CENTER" prefHeight="276.0" prefWidth="635.0" style="-fx-background-color: #610B21;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="30.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+</BorderPane>

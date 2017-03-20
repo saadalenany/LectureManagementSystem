@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Group layoutY="15.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Server.Main_.MainFXMLController">
+   <children>
+      <Rectangle fx:id="MainRect" arcHeight="5.0" arcWidth="5.0" fill="#3a8abf" height="60.0" layoutX="2.0" layoutY="1.0" onMouseEntered="#MouseEnteredRectAction" onMouseExited="#MouseExitRectAction" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" style="-fx-background-radius: 50; -fx-border-radius: 50;" width="500.0" />
+      <Group layoutX="127.0" layoutY="72.0" />
+      <JFXButton fx:id="StartBtn" contentDisplay="GRAPHIC_ONLY" layoutX="213.0" layoutY="15.0" onAction="#StartAction" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../../../resource/start.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="38.0" onAction="#TakeAbsenceAction" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../../../resource/rsz_contract.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="126.0" onAction="#makeQuizAction" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../../../resource/rsz_notepad.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="313.0" onAction="#ShowDatabaseDataAction" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../../../resource/rsz_web-page.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="profileButton" contentDisplay="GRAPHIC_ONLY" ellipsisString="sdasdasd" graphicTextGap="2.0" layoutX="397.0" maxHeight="-Infinity" onAction="#viewUserProfile" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction" prefHeight="31.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../../../resource/rsz_web-page.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton fx:id="close" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="476.0" layoutY="36.0" onAction="#CloseAction" onMouseEntered="#MouseEnteredBtnAction" onMouseExited="#MouseExitBtnAction">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="23.0">
+               <image>
+                  <Image url="@../../../resource/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</Group>

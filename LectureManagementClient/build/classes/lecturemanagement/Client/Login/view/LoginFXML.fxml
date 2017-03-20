@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="878.0" style="-fx-background-color: #610B21;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturemanagement.Client.Login.view.LoginFXMLController">
+   <center>
+      <StackPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="259.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="usernameText" focusColor="WHITE" labelFloat="true" promptText="username" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></JFXTextField>
+                  <JFXPasswordField fx:id="passText" focusColor="WHITE" promptText="password" style="-fx-text-fill: #fff;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></JFXPasswordField>
+                  <HBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="259.0" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="LoginButton" onAction="#LoginButtonAction" prefWidth="70.0" style="-fx-background-color: #F7819F;" text="Login" />
+                        <JFXButton onAction="#SignupButtonAction" prefWidth="70.0" style="-fx-background-color: #F7819F;" text="Sign up" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <HBox prefHeight="31.0" prefWidth="878.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #F7819F;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
